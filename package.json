@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/cameron-bret/pilatesPlanner#readme",
   "dependencies": {
+    "concurrently": "^4.1.0",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "mongoose": "^5.4.6"
