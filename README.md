@@ -13,9 +13,9 @@ https://trello.com/b/rJWyZYuF/pilates-planner
 **Below is a link to the wireframe images**
 
 ![wire frame 1](pilatesPlannerAssets/wireframes/wireframe1.png)
-![wire frame 2](pilatesPlannerAssets/wireframes/Web 1920 – 2@2x.png)
-![wire frame 3](pilatesPlannerAssets/wireframes/Web 1920 – 3@2x.png)
-![wire frame 4](pilatesPlannerAssets/wireframes/Web 1920 – 4@2x.png)
+![wire frame 2](pilatesPlannerAssets/wireframes/wireframe2.png)
+![wire frame 3](pilatesPlannerAssets/wireframes/wireframe3.png)
+![wire frame 4](pilatesPlannerAssets/wireframes/wireframe4.png)
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
