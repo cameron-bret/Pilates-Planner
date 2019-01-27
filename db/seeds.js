@@ -2,25 +2,29 @@ const Lesson = require('../models/Lesson')
 const Exercise = require('../models/Exercise')
 const mongoose = require('./connections')
 
-const mars = new Exercise({
-    title: 'Fly to Mars',
-    description: "Earth isn't Red enough. Let's move to a new planet"
+const pushUp = new Exercise({
+    title: 'Push Up',
+    description: "push the planet away from yourself",
+    equipment: "blah blah blah",
+    springWeight: 5
 })
 
-const tesla = new Exercise({
-    title: 'Build a Car',
-    description: "Gas is too expensive. I'm gonna build a car that doesn't need gas"
+const bicepCurl = new Exercise({
+    title: 'Bicep Curl',
+    description: "Build muscles in your beefy arms",
+    equipment: "blagh blgah blgah",
+    springWeight: 7
 })
 
-const elon = new Lesson({
-    username: 'elon_musk',
-    password: 'spaceiscool',
-    exercises: [mars, tesla]
+const tricepDip = new Lesson({
+    muscleGroup: 'arms',
+    level: 'introductory',
+    exercises: [pushUp, bicepCurl]
 })
 
 Lesson.remove({})
     .then(() => Exercise.remove({}))
-    .then(() => Exercise.insertMany([mars, tesla]))
-    .then(() => elon.save())
+    .then(() => Exercise.insertMany([pushUp, bicepCurl]))
+    .then(() => tricepDip.save())
     .then(() => console.log('Successful Save'))
     .then(() => mongoose.connection.close())

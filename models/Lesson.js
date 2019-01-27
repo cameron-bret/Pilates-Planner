@@ -2,9 +2,9 @@ const mongoose = require('../db/connections')
 const Schema = mongoose.Schema
 
 const Lesson = new Schema({
-    username: String,
-    password: String,
-    ideas: [
+    muscleGroup: String,
+    level: String,
+    exercises: [
         {
             type: Schema.Types.ObjectId,
             ref: 'Exercise'
