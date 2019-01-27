@@ -71,12 +71,12 @@ class Exercise extends Component {
                             <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="title" value={exercise.title}></input></div>
                             <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="description" value={exercise.description}></textarea></div>
                             <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="equipment" value={exercise.equipment}></textarea></div>
-                            <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="springWeight" value={exercise.springWeight}></textarea></div>
+                            <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="number" name="springWeight" value={exercise.springWeight}></input></div>
                         </ExerciseStyle>
                     ))}        
             </FlexContainer>
-        );
+        )
     }
 }
 
-export default Exercise;        
+export default Exercise  

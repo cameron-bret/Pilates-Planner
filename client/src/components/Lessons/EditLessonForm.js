@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
 
 class EditLessonForm extends Component {
     state = {
         lesson: {
-            username: '',
-            password: ''
+            muscleGroup: '',
+            level: ''
         }
     }
 
@@ -30,26 +30,13 @@ class EditLessonForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input type="text"
-                        placeholder="username"
-                        name="username"
-                        value={this.state.lesson.username}
-                        onChange={this.handleChange}
-                        />
-                    </div>
-                    <div>
-                        <input type="text"
-                        placeholder="password"
-                        value={this.state.lesson.password}
-                        onChange={this.handleChange}
-                        name="password"/>
-                    </div>
+                    <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={this.handleChange} value={this.state.lesson.username}/></div>
+                    <div><input type="text" name="level" placeholder="Level" onChange={this.handleChange} value={this.state.lesson.password}/></div>
                     <button>Submit</button>
                 </form>
             </div>
-        );
+        )
     }
 }
 
-export default EditLessonForm;
+export default EditLessonForm

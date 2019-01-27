@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
-import AddLessonForm from './AddLessonForm';
+import AddLessonForm from './AddLessonForm'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const GeneralStyles = styled.div`
+const OverallStyle = styled.div`
     text-align: center;
 `
 
@@ -29,21 +29,18 @@ class LessonList extends Component {
 
     render() {
         return (
-            <GeneralStyles>
+            <OverallStyle>
                 <h1>Lessons</h1>
-                <button onClick={this.toggleAddUserForm}>Create new Lesson</button>
-                {this.state.addLessonFormVisible ? <AddLessonForm
-                    getAllLessons={this.getAllLessons}
-                    toggleAddLessonForm={this.toggleAddLessonForm}
-                    /> : null}
+                <button onClick={this.toggleAddLessonForm}>Create new Lesson</button>
+                {this.state.addLessonFormVisible ? <AddLessonForm getAllLessons={this.getAllLessons} toggleAddLessonForm={this.toggleAddLessonForm}/> : null}
                 {this.state.lessons.map((lesson, i) => (
                     <div key={i}>
-                        <Link to={`/lessons/${lesson._id}`}><h3>{lesson.username}</h3></Link>
+                        <Link to={`/lessons/${lesson._id}`}><h3>{lesson.muscleGroup}</h3></Link>
                     </div>
                 ))}
-            </GeneralStyles>
-        );
+            </OverallStyle>
+        )
     }
 }
 
-export default LessonList;
+export default LessonList

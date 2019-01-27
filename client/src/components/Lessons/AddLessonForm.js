@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
 
 class AddLessonForm extends Component {
     state = {
-        lesson: {
-            username: '',
-            password: ''
-        }
+        muscleGroup: '',
+        level: '',
     }
 
     handleChange = (event) => {
@@ -29,26 +27,13 @@ class AddLessonForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input type="text"
-                        placeholder="username"
-                        name="username"
-                        value={this.state.lesson.username}
-                        onChange={this.handleChange}
-                        />
-                    </div>
-                    <div>
-                        <input type="text"
-                        placeholder="password"
-                        value={this.state.lesson.password}
-                        onChange={this.handleChange}
-                        name="password"/>
-                    </div>
+                    <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={this.handleChange} value={this.state.lesson.muscleGroup}/></div>
+                    <div><input type="text" name="password" placeholder="Level" onChange={this.handleChange} value={this.state.lesson.level}/></div>
                     <button>Submit</button>
                 </form>
             </div>
-        );
+        )
     }
 }
 
-export default AddLessonForm;
+export default AddLessonForm

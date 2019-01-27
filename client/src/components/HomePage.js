@@ -21,8 +21,8 @@ class HomePage extends Component {
                     <button>Legs Image Here</button>
                 </Link>
             </div>
-        );
+        )
     }
 }
 
-export default HomePage;
+export default HomePage

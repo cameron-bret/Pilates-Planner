@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
-import EditLessonForm from './EditLessonForm';
+import EditLessonForm from './EditLessonForm'
 import Exercise from '../Exercises/Exercise'
 import styled from 'styled-components'
 
-const PageStyles = styled.div`
-    text-align: center;
+const IndividualStyle = styled.div`
+    text-align: center
 `
 
 class SingleLesson extends Component {
@@ -48,25 +48,17 @@ class SingleLesson extends Component {
 
     render() {
         return (
-            <PageStyles>
-                <h1>{this.state.lesson.username}'s Exercises</h1>
-                <p>Password: {this.state.lesson.password}</p>
+            <IndividualStyle>
+                <h1>{this.state.lesson.muscleGroup}'s Exercises</h1>
+                <h2>Level: {this.state.lesson.level}</h2>
                 <div><button onClick={this.toggleEditLessonForm}>Edit Lesson</button></div>
-                <div>
-                    <button onClick={this.createNewExercise}>Add Exercise</button>
-                </div>
-                {this.state.editFormVisible ? <EditLessonForm
-                    getSingleLesson={this.getSingleLesson}
-                    lessonId={this.state.lesson._id}
-                    toggleEditLessonForm={this.toggleEditLessonForm}
-                /> : null}
+                <div><button onClick={this.createNewExercise}>Add Exercise</button></div>
+                {this.state.editFormVisible ? <EditLessonForm getSingleLesson={this.getSingleLesson} lessonId={this.state.lesson._id} toggleEditLessonForm={this.toggleEditLessonForm}/> : null}
                 <div><button onClick={this.deleteLesson}>Delete Lesson</button></div>
-                    <Exercise lesson={this.state.lesson}
-                    getSingleLesson={this.getSingleLesson}
-                    />
-            </PageStyles>
-        );
+                <Exercise lesson={this.state.lesson} getSingleLesson={this.getSingleLesson}/>
+            </IndividualStyle>
+        )
     }
 }
 
-export default SingleLesson;
+export default SingleLesson
