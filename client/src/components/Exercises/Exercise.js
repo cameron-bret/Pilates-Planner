@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import styled from 'styled-components'
-import axios from 'axios';
+import axios from 'axios'
 
-const PostIt = styled.form`
-    height: 200px;
-    width: 200px;
-    background-color: beige;
-    margin: 20px;
+const ExerciseStyle = styled.form`
+    height: 400px;
+    width: 400px;
+    background-color: #888888;
+    margin: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
     input {
-        background-color: beige;
+        background-color: #796388;
     }
 
     textarea {
-        background-color: beige;
+        background-color: #999911;
     }
 `
 
@@ -29,13 +29,15 @@ class Exercise extends Component {
     state = {
         exercise: {
             title: '',
-            description: ''
+            description: '',
+            equipment: '',
+            springWeight: ''
         }
     }
 
     handleChange = (event, exerciseId) => {
         console.log(exerciseId)
-        this.props.user.exercises.forEach((exercise) => {
+        this.props.lesson.exercises.forEach((exercise) => {
             if(exerciseId === exercise._id) {
                 // this.setState({exercise: exercise})
                 updatedState[event.target.name] = event.target.value
@@ -49,26 +51,28 @@ class Exercise extends Component {
         event.preventDefault()
         const datapass = this.state.exercise
         axios.patch(`/api/exercises/${exerciseId}`, datapass)
-        .then(() => this.props.getSingleUser)
+        .then(() => this.props.getSingleLesson)
     }
 
     deleteExercise = (event, exerciseId) => {
         event.preventDefault()
         console.log(exerciseId)
         axios.delete(`/api/exercises/${exerciseId}`).then(() => {
-            this.props.getSingleUser()
+            this.props.getSingleLesson()
         })
     }
 
     render() {
         return (
             <FlexContainer>
-                {this.props.user.exercises.map((exercise, i) => (
-                        <PostIt onBlur={(event) => this.handleSubmit(event, exercise._id)} key={i}>
+                {this.props.lesson.exercises.map((exercise, i) => (
+                        <ExerciseStyle onBlur={(event) => this.handleSubmit(event, exercise._id)} key={i}>
                             <button onClick={(event)=> this.deleteExercise(event, exercise._id)}>x</button>
                             <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="title" value={exercise.title}></input></div>
                             <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="description" value={exercise.description}></textarea></div>
-                        </PostIt>
+                            <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="equipment" value={exercise.equipment}></textarea></div>
+                            <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="springWeight" value={exercise.springWeight}></textarea></div>
+                        </ExerciseStyle>
                     ))}        
             </FlexContainer>
         );

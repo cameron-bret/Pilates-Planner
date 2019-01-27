@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import HomePage from './components/HomePage'
-import LessonList from './components/Lessons/LessonList';
-import SingleLesson from './components/Lessons/SingleLesson';
+import LessonList from './components/Lessons/LessonList'
+import SingleLesson from './components/Lessons/SingleLesson'
 
 class App extends Component {
   render() {
