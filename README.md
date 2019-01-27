@@ -12,7 +12,7 @@ https://trello.com/b/rJWyZYuF/pilates-planner
 
 **Below is a link to the wireframe images**
 
-![wire frame 1](pilatesPlannerAssets/wireframes/Web 1920 – 1@2x.png)
+![wire frame 1](wireframes/Web 1920 – 1@2x.png)
 ![wire frame 2](pilatesPlannerAssets/wireframes/Web 1920 – 2@2x.png)
 ![wire frame 3](pilatesPlannerAssets/wireframes/Web 1920 – 3@2x.png)
 ![wire frame 4](pilatesPlannerAssets/wireframes/Web 1920 – 4@2x.png)
