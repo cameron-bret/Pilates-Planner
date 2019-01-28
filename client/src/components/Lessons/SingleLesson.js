@@ -10,22 +10,18 @@ const OverallStyle = styled.div`
 `
 
 class SingleLesson extends Component {
-    state = {
-        exercise: {
-            exerciseTitle: '',
-            description: '',
-            equipment: '',
-            springWeight: '',
-        },
-        editFormVisible: false
-    }
-
-    state = {
+        state = {
         lesson: {
             lessonTitle: '',
             muscleGroup: '',
             level: '',
             exercises: [{}]
+        }, 
+        exercise: {
+            exerciseTitle: '',
+            description: '',
+            equipment: '',
+            springWeight: '',
         },
         editFormVisible: false
     }
@@ -55,7 +51,7 @@ class SingleLesson extends Component {
 
     createNewExercise = () => {
         const lessonId = this.props.match.params.lessonId
-        axios.post(`/api/lessons/${lessonId}/exercises`).then((res) => {
+        axios.post(`/api/lessons/${lessonId}/exercises`, this.state.exercise).then((res) => {
             console.log(res.data)
             this.getSingleLesson()
         })
