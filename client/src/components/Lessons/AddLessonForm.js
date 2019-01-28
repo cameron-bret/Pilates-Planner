@@ -20,17 +20,16 @@ class AddLessonForm extends Component {
         const datapass = this.state.lesson
         axios.post('/api/lessons', datapass)
         .then((res) => {
-            this.props.getAllLessons()
-            this.props.toggleAddLessonForm()
+            console.log(res.data)
         })
     }
 
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={this.handleChange}/></div>
-                    <div><input type="text" name="password" placeholder="Level" onChange={this.handleChange}/></div>
+                <form onSubmit={(event)=> this.handleSubmit(event)}>
+                    <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={(event)=> this.handleChange(event)}/></div>
+                    <div><input type="text" name="level" placeholder="Level" onChange={(event)=> this.handleChange(event)}/></div>
                     <button>Submit</button>
                 </form>
             </div>
