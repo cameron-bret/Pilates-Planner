@@ -3,14 +3,28 @@ import axios from 'axios'
 import EditLessonForm from './EditLessonForm'
 import Exercise from '../Exercises/Exercise'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-const IndividualStyle = styled.div`
-    text-align: center
+const OverallStyle = styled.div`
+    text-align: center;
 `
 
 class SingleLesson extends Component {
     state = {
+        exercise: {
+            exerciseTitle: '',
+            description: '',
+            equipment: '',
+            springWeight: '',
+        },
+        editFormVisible: false
+    }
+
+    state = {
         lesson: {
+            lessonTitle: '',
+            muscleGroup: '',
+            level: '',
             exercises: [{}]
         },
         editFormVisible: false
@@ -24,6 +38,7 @@ class SingleLesson extends Component {
         const lessonId = this.props.match.params.lessonId
         axios.get(`/api/lessons/${lessonId}`)
             .then((res) => {
+                console.log(res.data)
                 this.setState({ lesson: res.data })
             })
     }
@@ -48,15 +63,19 @@ class SingleLesson extends Component {
 
     render() {
         return (
-            <IndividualStyle>
-                <h1>{this.state.lesson.muscleGroup}'s Exercises</h1>
-                <h2>Level: {this.state.lesson.level}</h2>
-                <div><button onClick={this.toggleEditLessonForm}>Edit Lesson</button></div>
+            <OverallStyle>
+            <Link to="/">
+                <h1>Pilates Planner</h1>
+                </Link>
+                <h2>{this.state.lesson.lessonTitle}'s Exercises</h2>
+                <h4>Muscle Group: {this.state.lesson.muscleGroup}</h4>
+                <h4>Level: {this.state.lesson.level}</h4>
                 <div><button onClick={this.createNewExercise}>Add Exercise</button></div>
+                <div><button onClick={this.toggleEditLessonForm}>Edit Lesson</button></div>
                 {this.state.editFormVisible ? <EditLessonForm getSingleLesson={this.getSingleLesson} lessonId={this.state.lesson._id} toggleEditLessonForm={this.toggleEditLessonForm}/> : null}
                 <div><button onClick={this.deleteLesson}>Delete Lesson</button></div>
                 <Exercise lesson={this.state.lesson} getSingleLesson={this.getSingleLesson}/>
-            </IndividualStyle>
+            </OverallStyle>
         )
     }
 }

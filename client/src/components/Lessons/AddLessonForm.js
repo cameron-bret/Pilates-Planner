@@ -4,6 +4,7 @@ import axios from 'axios'
 class AddLessonForm extends Component {
     state = {
         lesson: {
+            lessonTitle: '',
             muscleGroup: '',
             level: '',
         }
@@ -20,7 +21,7 @@ class AddLessonForm extends Component {
         const datapass = this.state.lesson
         axios.post('/api/lessons', datapass)
         .then((res) => {
-            console.log(res.data)
+            this.props.getAllLessons()
         })
     }
 
@@ -28,6 +29,7 @@ class AddLessonForm extends Component {
         return (
             <div>
                 <form onSubmit={(event)=> this.handleSubmit(event)}>
+                    <div><input type="text" name="lessonTitle" placeholder="Name" onChange={(event)=> this.handleChange(event)}/></div>
                     <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={(event)=> this.handleChange(event)}/></div>
                     <div><input type="text" name="level" placeholder="Level" onChange={(event)=> this.handleChange(event)}/></div>
                     <button>Submit</button>

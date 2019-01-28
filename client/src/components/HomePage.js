@@ -14,11 +14,8 @@ class HomePage extends Component {
                 <h1>Pilates Planner</h1>
                 </Link>
                 <Link to="/lessons">
-                    <button>Lessons</button>
+                <a href="https://imgur.com/pICwU5q"><img src="https://i.imgur.com/pICwU5q.png" title="source: imgur.com" /></a>
                 </Link>
-                <Link to="/exercises">
-                    <button>Exercises</button>
-                </Link> 
             </OverallStyle>
         )
     }

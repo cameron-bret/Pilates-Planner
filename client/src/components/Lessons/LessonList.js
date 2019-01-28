@@ -38,7 +38,7 @@ class LessonList extends Component {
                 {this.state.addLessonFormVisible ? <AddLessonForm getAllLessons={this.getAllLessons} toggleAddLessonForm={this.toggleAddLessonForm}/> : null}
                 {this.state.lessons.map((lesson, i) => (
                     <div key={i}>
-                        <Link to={`/lessons/${lesson._id}`}><h3>{lesson.muscleGroup}</h3></Link>
+                        <Link to={`/lessons/${lesson._id}`}><h4>{lesson.lessonTitle}</h4></Link>
                     </div>
                 ))}
             </OverallStyle>
