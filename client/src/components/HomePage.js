@@ -1,26 +1,25 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+const OverallStyle = styled.div`
+    text-align: center;
+`
 
 class HomePage extends Component {
     render() {
         return (
-            <div>
-                <Link to="/">
+            <OverallStyle>
+            <Link to="/">
                 <h1>Pilates Planner</h1>
                 </Link>
                 <Link to="/lessons">
-                    <button>Head Image Here</button>
+                    <button>Lessons</button>
                 </Link>
-                <Link to="/lessons">
-                    <button>Torso Image Here</button>
-                </Link>
-                <Link to="/lessons">
-                    <button>Arms Image Here</button>
-                </Link>
-                <Link to="/lessons">
-                    <button>Legs Image Here</button>
-                </Link>
-            </div>
+                <Link to="/exercises">
+                    <button>Exercises</button>
+                </Link> 
+            </OverallStyle>
         )
     }
 }

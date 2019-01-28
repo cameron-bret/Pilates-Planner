@@ -5,7 +5,7 @@ const exercisesController = require('../controllers/exercisesController')
 
 router.get('/api/lessons', lessonController.index)
 router.get('/api/lesson/:lessonId', lessonController.show)
-router.post('/api/lessons/', lessonController.create)
+router.post('/api/lessons', lessonController.create)
 router.patch('/api/lessons/:lessonId', lessonController.update)
 router.delete('/api/lessons/:lessonId', lessonController.delete)
 

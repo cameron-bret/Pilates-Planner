@@ -3,8 +3,10 @@ import axios from 'axios'
 
 class AddLessonForm extends Component {
     state = {
-        muscleGroup: '',
-        level: '',
+        lesson: {
+            muscleGroup: '',
+            level: '',
+        }
     }
 
     handleChange = (event) => {
@@ -27,8 +29,8 @@ class AddLessonForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={this.handleChange} value={this.state.lesson.muscleGroup}/></div>
-                    <div><input type="text" name="password" placeholder="Level" onChange={this.handleChange} value={this.state.lesson.level}/></div>
+                    <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={this.handleChange}/></div>
+                    <div><input type="text" name="password" placeholder="Level" onChange={this.handleChange}/></div>
                     <button>Submit</button>
                 </form>
             </div>

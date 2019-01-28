@@ -30,6 +30,9 @@ class LessonList extends Component {
     render() {
         return (
             <OverallStyle>
+            <Link to="/">
+                <h1>Pilates Planner</h1>
+                </Link>
                 <h1>Lessons</h1>
                 <button onClick={this.toggleAddLessonForm}>Create new Lesson</button>
                 {this.state.addLessonFormVisible ? <AddLessonForm getAllLessons={this.getAllLessons} toggleAddLessonForm={this.toggleAddLessonForm}/> : null}
