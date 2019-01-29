@@ -19,17 +19,25 @@ https://trello.com/b/rJWyZYuF/pilates-planner
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
-Adobe XD, Adobe Photoshop, MondoDB, Mongoose, Express.js, React.js, Node.js, styled-components, axios, react-router-dom, npm, nodemon, Heroku, Github. 
+Adobe XD, Adobe Photoshop, Adobe Capture, MondoDB, Mongoose, Express.js, React.js, Node.js, styled-components, Materialize, axios, react-router-dom, npm, nodemon, Heroku, Github, and classroom lessons. 
 
 **Below is a list of goals for version 2**
 
-- version 2 goal: 
-- version 2 goal: 
-- version 2 goal: 
+- version 2 goal: The teachers will have their own portal with AuthO sign in.
+- version 2 goal: The lessons will be able to be added to a calendar with time slots.
+- version 2 goal: There will be a sharing feature and a student log in portal.
 
 **Special Thanks**
 
-- 
-- 
+- Ranna Nix
+- JB Watson
+- William Njie
+- Daniel Mishael
+- Andrew McIntosh
+- Mark Haley
+- Spencer Merryman
+- Cameron Gunter
+- Stanley Kimani
+- Noah Harvey
 
 for inspiration, motivation, and guidance along the way!

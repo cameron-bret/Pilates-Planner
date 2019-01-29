@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
-const ButtonStyle = styled.button`
+const FormStyle = styled.button`
     text-align: center;
     border: none;
     background-color: #CF986F;
@@ -13,7 +13,7 @@ const ButtonStyle = styled.button`
     font-size: 16px;
 `
 
-class AddLessonForm extends Component {
+class CreateLesson extends Component {
     state = {
         lesson: {
             lessonTitle: '',
@@ -39,16 +39,16 @@ class AddLessonForm extends Component {
 
     render() {
         return (
-            <ButtonStyle>
+            <FormStyle>
                 <form onSubmit={(event)=> this.handleSubmit(event)}>
                     <div><input type="text" name="lessonTitle" placeholder="Name" onChange={(event)=> this.handleChange(event)}/></div>
                     <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={(event)=> this.handleChange(event)}/></div>
                     <div><input type="text" name="level" placeholder="Level" onChange={(event)=> this.handleChange(event)}/></div>
-                    <button>Submit</button>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right"></i></button>
                 </form>
-            </ButtonStyle>
+            </FormStyle>
         )
     }
 }
 
-export default AddLessonForm
+export default CreateLesson

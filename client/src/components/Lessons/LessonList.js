@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import AddLessonForm from './AddLessonForm'
+import CreateLesson from './CreateLesson'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -13,7 +13,7 @@ const OverallStyle = styled.div`
 class LessonList extends Component {
     state = {
         lessons: [{}],
-        addLessonFormVisible: false
+        createLessonVisible: false
     }
 
     componentDidMount() {
@@ -25,8 +25,8 @@ class LessonList extends Component {
         .then((res) => this.setState({ lessons: res.data }))
     }
 
-    toggleAddLessonForm = () => {
-        this.setState({ addLessonFormVisible: !this.state.addLessonFormVisible })
+    toggleCreateLesson = () => {
+        this.setState({ createLessonVisible: !this.state.createLessonVisible })
     }
 
     render() {
@@ -39,8 +39,8 @@ class LessonList extends Component {
                 </Link>
                 </div>
                 <h2>Lessons</h2>
-                <button onClick={this.toggleAddLessonForm}>Create new Lesson</button>
-                {this.state.addLessonFormVisible ? <AddLessonForm getAllLessons={this.getAllLessons} toggleAddLessonForm={this.toggleAddLessonForm}/> : null}
+                <button onClick={this.toggleCreateLesson}>Create New Lesson</button>
+                {this.state.createLessonVisible ? <CreateLesson getAllLessons={this.getAllLessons} toggleCreateLesson={this.toggleCreateLesson}/> : null}
                 {this.state.lessons.map((lesson, i) => (
                     <div key={i}>
                         <Link to={`/lessons/${lesson._id}`}><h5>{lesson.lessonTitle}</h5></Link>
