@@ -4,85 +4,85 @@ const mongoose = require('./connections')
 
 const pushUp = new Exercise({
     exerciseTitle: 'Push Up',
-    description: "push the planet away from yourself",
-    equipment: "mat or reformer",
+    description: "Push the planet away from yourself",
+    equipment: "Mat or Reformer",
     springWeight: 5
 })
 
 const bicepCurl = new Exercise({
     exerciseTitle: 'Bicep Curl',
     description: "Build muscles in your beefy arms",
-    equipment: "mat or reformer",
+    equipment: "Mat or Reformer",
     springWeight: 7
 })
 
 const scissors = new Exercise({
     exerciseTitle: 'Scissors',
-    description: "alternate kick legs",
-    equipment: "mat or reformer",
+    description: "Alternate kick legs in air",
+    equipment: "Mat or Reformer",
     springWeight: 5
 })
 
 const liftAndLower = new Exercise({
     exerciseTitle: 'Lift and Lower',
-    description: "first the legs lift, and then they lower",
-    equipment: "mat or reformer",
+    description: "First the legs lift, and then they lower",
+    equipment: "Mat or Reformer",
     springWeight: 2
 })
 
 const plank = new Exercise({
     exerciseTitle: 'Plank',
-    description: "holding push-up position",
-    equipment: "mat, reformer, or box",
+    description: "Holding push-up position",
+    equipment: "Mat, Reformer, or Box",
     springWeight: 1
 })
 
 const chestLifts = new Exercise({
     exerciseTitle: 'Chest Lifts',
     description: "When you lift your chest",
-    equipment: "mat",
+    equipment: "Mat",
     springWeight: 0
 })
 
 const supineArms = new Exercise({
     exerciseTitle: 'Supine Arms',
-    description: "work out beast mode",
-    equipment: "blah blah blah",
+    description: "Work out beast mode for those arms",
+    equipment: "Mat or Reformer",
     springWeight: 5
 })
 
 const skullCrusher = new Exercise({
     exerciseTitle: 'Skull Crasher',
-    description: "tricep over the head lifty thingy",
-    equipment: "mat or reformer",
+    description: "Tricep over the head lifty thingy",
+    equipment: "Mat or Reformer",
     springWeight: 1
 })
 
 const Lesson1 = new Lesson({
     lessonTitle: 'Lesson 1',
-    muscleGroup: 'arms',
-    level: 'introductory',
+    muscleGroup: 'Arms',
+    level: 'Introductory',
     exercises: [pushUp, bicepCurl, supineArms, skullCrusher]
 })
 
 const Lesson2 = new Lesson({
     lessonTitle: 'Lesson 2',
-    muscleGroup: 'legs',
-    level: 'intermediate',
+    muscleGroup: 'Legs',
+    level: 'Intermediate',
     exercises: [liftAndLower, scissors]
 })
 
 const Lesson3 = new Lesson({
     lessonTitle: 'Lesson 3',
-    muscleGroup: 'core',
-    level: 'advanced',
+    muscleGroup: 'Core',
+    level: 'Advanced',
     exercises: [plank, chestLifts]
 })
 
 const Lesson4 = new Lesson({
     lessonTitle: 'Lesson 4',
-    muscleGroup: 'arms',
-    level: 'injury',
+    muscleGroup: 'Arms',
+    level: 'Injury',
     exercises: [bicepCurl, pushUp]
 })
 

@@ -6,7 +6,8 @@ const ExerciseStyle = styled.form`
     height: 400px;
     width: 250px;
     margin: 40px;
-    padding: 4px;
+    padding: 10px;
+    border-radius: 20px;
     color: #FFFFFF;
     background-color: #63B2C9;
     display: flex;

@@ -72,10 +72,10 @@ class SingleLesson extends Component {
                 <h1>{this.state.lesson.lessonTitle}</h1>
                 <h4>Muscle Group: {this.state.lesson.muscleGroup}</h4>
                 <h4>Level: {this.state.lesson.level}</h4>
-                <div><button onClick={this.createNewExercise}>Add Exercise</button></div>
                 <div><button onClick={this.toggleEditLessonForm}>Edit Lesson</button></div>
                 {this.state.editFormVisible ? <EditLessonForm getSingleLesson={this.getSingleLesson} lessonId={this.state.lesson._id} toggleEditLessonForm={this.toggleEditLessonForm}/> : null}
                 <div><button onClick={this.deleteLesson}>Delete Lesson</button></div>
+                <div><button onClick={this.createNewExercise}>Add Exercise</button></div>
                 <Exercise lesson={this.state.lesson} getSingleLesson={this.getSingleLesson}/>
             </OverallStyle>
         )
