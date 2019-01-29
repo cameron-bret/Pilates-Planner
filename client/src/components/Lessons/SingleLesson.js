@@ -69,9 +69,9 @@ class SingleLesson extends Component {
                 <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo" /></a>
                 </Link>
                 </div>
-                <h1>{this.state.lesson.lessonTitle}</h1>
-                <h4>Muscle Group: {this.state.lesson.muscleGroup}</h4>
-                <h4>Level: {this.state.lesson.level}</h4>
+                <h2>{this.state.lesson.lessonTitle}</h2>
+                <h6><b>Muscle Group: </b>{this.state.lesson.muscleGroup}</h6>
+                <h6><b>Level: </b>{this.state.lesson.level}</h6>
                 <div><button onClick={this.toggleEditLessonForm}>Edit Lesson</button></div>
                 {this.state.editFormVisible ? <EditLessonForm getSingleLesson={this.getSingleLesson} lessonId={this.state.lesson._id} toggleEditLessonForm={this.toggleEditLessonForm}/> : null}
                 <div><button onClick={this.deleteLesson}>Delete Lesson</button></div>

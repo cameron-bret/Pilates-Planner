@@ -10,6 +10,7 @@ const BgImage = styled.div`
     height: 100%;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed; 
 `
 
 class App extends Component {

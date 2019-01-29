@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import axios from 'axios'
 
 const ExerciseStyle = styled.form`
-    height: 400px;
-    width: 250px;
+    height: 450px;
+    width: 360px;
     margin: 40px;
     padding: 10px;
     border-radius: 20px;
@@ -61,13 +61,13 @@ class Exercise extends Component {
             <ExercisesContainer>
                 {this.props.lesson.exercises.map((exercise, i) => (
                         <ExerciseStyle onBlur={(event) => this.handleSubmit(event, exercise._id)} key={i}>
-                            <h4>Title</h4>
+                            <h6><b>Title</b></h6>
                             <div><input type="text" name="exerciseTitle" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.exerciseTitle}></input></div>                         
-                            <h4>Description</h4>   
-                            <div><textarea type="text" name="description" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.description}></textarea></div>
-                            <h4>Equipment</h4>
-                            <div><textarea type="text" name="equipment" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.equipment}></textarea></div>
-                            <h4>Spring Weight</h4>
+                            <h6><b>Description</b></h6>  
+                            <div><input type="text" name="description" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.description}></input></div>
+                            <h6><b>Equipment</b></h6>
+                            <div><input type="text" name="equipment" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.equipment}></input></div>
+                            <h6><b>Spring Weight</b></h6>
                             <div><input type="number" name="springWeight" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.springWeight}></input></div>
                             <br></br>
                             <button onClick={(event)=> this.deleteExercise(event, exercise._id)}>Delete</button>

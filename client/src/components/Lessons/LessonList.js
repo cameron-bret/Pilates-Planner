@@ -38,12 +38,12 @@ class LessonList extends Component {
                 <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo" /></a>
                 </Link>
                 </div>
-                <h1>Lessons</h1>
+                <h2>Lessons</h2>
                 <button onClick={this.toggleAddLessonForm}>Create new Lesson</button>
                 {this.state.addLessonFormVisible ? <AddLessonForm getAllLessons={this.getAllLessons} toggleAddLessonForm={this.toggleAddLessonForm}/> : null}
                 {this.state.lessons.map((lesson, i) => (
                     <div key={i}>
-                        <Link to={`/lessons/${lesson._id}`}><h4>{lesson.lessonTitle}</h4></Link>
+                        <Link to={`/lessons/${lesson._id}`}><h5>{lesson.lessonTitle}</h5></Link>
                     </div>
                 ))}
             </OverallStyle>
