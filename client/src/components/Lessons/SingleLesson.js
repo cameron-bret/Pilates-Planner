@@ -7,10 +7,15 @@ import { Link } from 'react-router-dom'
 
 const OverallStyle = styled.div`
     text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    color: #707070;
 `
-const LinkStyle = styled.h1`
-    text-decoration: none;
-    font-family: "Helvetica Neue";
+const InnerExerciseStyle = styled.div`
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    color: #FFFFFF;
 `
 
 class SingleLesson extends Component {
@@ -64,12 +69,13 @@ class SingleLesson extends Component {
     render() {
         return (
             <OverallStyle>
-            <LinkStyle>
+                <div>
+                <br></br>
                 <Link to="/">
-                <h1>Pilates Planner</h1>
+                <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo image" /></a>
                 </Link>
-                </LinkStyle>
-                <h2>{this.state.lesson.lessonTitle}'s Exercises</h2>
+                </div>
+                <h1>{this.state.lesson.lessonTitle}</h1>
                 <h4>Muscle Group: {this.state.lesson.muscleGroup}</h4>
                 <h4>Level: {this.state.lesson.level}</h4>
                 <div><button onClick={this.createNewExercise}>Add Exercise</button></div>

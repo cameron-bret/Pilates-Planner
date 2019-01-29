@@ -5,22 +5,23 @@ import styled from 'styled-components'
 const OverallStyle = styled.div`
     text-align: center;
 `
-const LinkStyle = styled.h1`
-    text-decoration: none;
-    font-family: "Helvetica Neue";
-`
 
 class HomePage extends Component {
     render() {
         return (
             <OverallStyle>
-            <LinkStyle>
+            <div>
+            <br></br>
             <Link to="/">
-                <h1>Pilates Planner</h1>
+            <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo image" /></a>
                 </Link>
-                </LinkStyle>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <Link to="/lessons">
-                <a href="https://imgur.com/pICwU5q"><img src="https://i.imgur.com/pICwU5q.png" title="source: imgur.com" /></a>
+                <a href="https://imgur.com/pICwU5q"><img src="https://i.imgur.com/pICwU5q.png" alt="muscle group selector image" /></a>
                 </Link>
             </OverallStyle>
         )

@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom'
 
 const OverallStyle = styled.div`
     text-align: center;
-`
-const LinkStyle = styled.h1`
     text-decoration: none;
-    font-family: "Helvetica Neue";
+    color: #707070;
 `
 
 class LessonList extends Component {
@@ -34,11 +32,12 @@ class LessonList extends Component {
     render() {
         return (
             <OverallStyle>
-                <LinkStyle>
+                <div>
+                <br></br>
                 <Link to="/">
-                <h1>Pilates Planner</h1>
+                <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo image" /></a>
                 </Link>
-                </LinkStyle>
+                </div>
                 <h1>Lessons</h1>
                 <button onClick={this.toggleAddLessonForm}>Create new Lesson</button>
                 {this.state.addLessonFormVisible ? <AddLessonForm getAllLessons={this.getAllLessons} toggleAddLessonForm={this.toggleAddLessonForm}/> : null}
