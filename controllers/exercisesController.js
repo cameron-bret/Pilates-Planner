@@ -26,8 +26,8 @@ const exercisesController = {
                 Exercise.create(req.body)
                     .then((newExercise) => {
                         console.log(newExercise)
-                        user.exercises.push(newExercise)
-                        user.save()
+                        lesson.exercises.push(newExercise)
+                        lesson.save()
                         res.send(newExercise)
                     })
             })

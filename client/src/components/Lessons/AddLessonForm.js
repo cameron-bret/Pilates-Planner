@@ -1,5 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const ButtonStyle = styled.button`
+    text-align: center;
+    background-color: #CF986F;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+`
 
 class AddLessonForm extends Component {
     state = {
@@ -32,7 +43,9 @@ class AddLessonForm extends Component {
                     <div><input type="text" name="lessonTitle" placeholder="Name" onChange={(event)=> this.handleChange(event)}/></div>
                     <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={(event)=> this.handleChange(event)}/></div>
                     <div><input type="text" name="level" placeholder="Level" onChange={(event)=> this.handleChange(event)}/></div>
+                    <ButtonStyle>
                     <button>Submit</button>
+                    </ButtonStyle>
                 </form>
             </div>
         )

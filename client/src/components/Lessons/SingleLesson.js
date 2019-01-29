@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom'
 const OverallStyle = styled.div`
     text-align: center;
 `
+const LinkStyle = styled.h1`
+    text-decoration: none;
+    font-family: "Helvetica Neue";
+`
 
 class SingleLesson extends Component {
         state = {
@@ -60,9 +64,11 @@ class SingleLesson extends Component {
     render() {
         return (
             <OverallStyle>
-            <Link to="/">
+            <LinkStyle>
+                <Link to="/">
                 <h1>Pilates Planner</h1>
                 </Link>
+                </LinkStyle>
                 <h2>{this.state.lesson.lessonTitle}'s Exercises</h2>
                 <h4>Muscle Group: {this.state.lesson.muscleGroup}</h4>
                 <h4>Level: {this.state.lesson.level}</h4>
