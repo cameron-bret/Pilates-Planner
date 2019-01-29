@@ -4,27 +4,16 @@ import axios from 'axios'
 
 const ExerciseStyle = styled.form`
     height: 400px;
-    width: 400px;
-    background-color: #888888;
+    width: 250px;
     margin: 40px;
+    padding: 12px;
+    background-color: #63B2C9;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
-    input {
-        background-color: #796388;
-    }
-
-    textarea {
-        background-color: #999911;
-    }
 `
 
 const ExercisesContainer = styled.div`
     display: inline-block;
-    justify-content: center;
-    margin: auto;
-    text-align: center;
 `
 
 class Exercise extends Component {
@@ -69,10 +58,15 @@ class Exercise extends Component {
             <ExercisesContainer>
                 {this.props.lesson.exercises.map((exercise, i) => (
                         <ExerciseStyle onBlur={(event) => this.handleSubmit(event, exercise._id)} key={i}>
+                            <h4>Title</h4>
                             <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="exerciseTitle" value={exercise.exerciseTitle}></input></div>
+                            <h4>Description</h4>
                             <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="description" value={exercise.description}></textarea></div>
+                            <h4>Equipment</h4>
                             <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="equipment" value={exercise.equipment}></textarea></div>
+                            <h4>Spring Weight</h4>
                             <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="number" name="springWeight" value={exercise.springWeight}></input></div>
+                            <br></br>
                             <button onClick={(event)=> this.deleteExercise(event, exercise._id)}>Delete</button>
                         </ExerciseStyle>
                     ))}        
