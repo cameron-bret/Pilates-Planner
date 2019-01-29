@@ -20,15 +20,17 @@ const ExerciseStyle = styled.form`
     }
 `
 
-const FlexContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+const ExercisesContainer = styled.div`
+    display: inline-block;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
 `
 
 class Exercise extends Component {
     state = {
         exercise: {
-            title: '',
+            exerciseTitle: '',
             description: '',
             equipment: '',
             springWeight: ''
@@ -64,17 +66,17 @@ class Exercise extends Component {
 
     render() {
         return (
-            <FlexContainer>
+            <ExercisesContainer>
                 {this.props.lesson.exercises.map((exercise, i) => (
                         <ExerciseStyle onBlur={(event) => this.handleSubmit(event, exercise._id)} key={i}>
-                            <button onClick={(event)=> this.deleteExercise(event, exercise._id)}>x</button>
-                            <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="title" value={exercise.title}></input></div>
+                            <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="exerciseTitle" value={exercise.exerciseTitle}></input></div>
                             <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="description" value={exercise.description}></textarea></div>
                             <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="equipment" value={exercise.equipment}></textarea></div>
                             <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="number" name="springWeight" value={exercise.springWeight}></input></div>
+                            <button onClick={(event)=> this.deleteExercise(event, exercise._id)}>Delete</button>
                         </ExerciseStyle>
                     ))}        
-            </FlexContainer>
+            </ExercisesContainer>
         )
     }
 }
