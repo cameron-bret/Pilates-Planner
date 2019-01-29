@@ -13,7 +13,7 @@ class HomePage extends Component {
             <div>
             <br></br>
             <Link to="/">
-            <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo image" /></a>
+            <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo" /></a>
                 </Link>
                 </div>
                 <br></br>
@@ -21,7 +21,7 @@ class HomePage extends Component {
                 <br></br>
                 <br></br>
                 <Link to="/lessons">
-                <a href="https://imgur.com/pICwU5q"><img src="https://i.imgur.com/pICwU5q.png" alt="muscle group selector image" /></a>
+                <a href="https://imgur.com/pICwU5q"><img src="https://i.imgur.com/pICwU5q.png" alt="muscle group selector" /></a>
                 </Link>
             </OverallStyle>
         )

@@ -11,12 +11,6 @@ const OverallStyle = styled.div`
     font-size: 16px;
     color: #707070;
 `
-const InnerExerciseStyle = styled.div`
-    text-align: center;
-    font-family: Lato;
-    font-size: 16px;
-    color: #FFFFFF;
-`
 
 class SingleLesson extends Component {
         state = {
@@ -72,7 +66,7 @@ class SingleLesson extends Component {
                 <div>
                 <br></br>
                 <Link to="/">
-                <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo image" /></a>
+                <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo" /></a>
                 </Link>
                 </div>
                 <h1>{this.state.lesson.lessonTitle}</h1>

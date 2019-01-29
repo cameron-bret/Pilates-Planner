@@ -32,7 +32,7 @@ class Exercise extends Component {
         console.log(exerciseId)
         this.props.lesson.exercises.forEach((exercise) => {
             if(exerciseId === exercise._id) {
-                // this.setState({exercise: exercise})
+                this.setState({exercise: exercise})
                 updatedState[event.target.name] = event.target.value
             }
         })
@@ -61,13 +61,13 @@ class Exercise extends Component {
                 {this.props.lesson.exercises.map((exercise, i) => (
                         <ExerciseStyle onBlur={(event) => this.handleSubmit(event, exercise._id)} key={i}>
                             <h4>Title</h4>
-                            <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="exerciseTitle" value={exercise.exerciseTitle}></input></div>                         
+                            <div><input type="text" name="exerciseTitle" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.exerciseTitle}></input></div>                         
                             <h4>Description</h4>   
-                            <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="description" value={exercise.description}></textarea></div>
+                            <div><textarea type="text" name="description" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.description}></textarea></div>
                             <h4>Equipment</h4>
-                            <div><textarea onChange={(event)=> this.handleChange(event, exercise._id)} type="text" name="equipment" value={exercise.equipment}></textarea></div>
+                            <div><textarea type="text" name="equipment" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.equipment}></textarea></div>
                             <h4>Spring Weight</h4>
-                            <div><input onChange={(event)=> this.handleChange(event, exercise._id)} type="number" name="springWeight" value={exercise.springWeight}></input></div>
+                            <div><input type="number" name="springWeight" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.springWeight}></input></div>
                             <br></br>
                             <button onClick={(event)=> this.deleteExercise(event, exercise._id)}>Delete</button>
                         </ExerciseStyle>

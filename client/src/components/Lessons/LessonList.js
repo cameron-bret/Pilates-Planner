@@ -35,7 +35,7 @@ class LessonList extends Component {
                 <div>
                 <br></br>
                 <Link to="/">
-                <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo image" /></a>
+                <a href="https://imgur.com/i80rpSA"><img src="https://i.imgur.com/i80rpSA.png" alt="pilates planner header with logo" /></a>
                 </Link>
                 </div>
                 <h1>Lessons</h1>
