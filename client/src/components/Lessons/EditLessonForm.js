@@ -4,11 +4,12 @@ import styled from 'styled-components'
 
 const ButtonStyle = styled.button`
     text-align: center;
+    border: none;
     background-color: #CF986F;
     padding: 5px;
-    text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     font-size: 16px;
 `
 
@@ -40,16 +41,14 @@ class EditLessonForm extends Component {
 
     render() {
         return (
-            <div>
+            <ButtonStyle>
                 <form onSubmit={this.handleSubmit}>
                     <div><input type="text" name="lessonTitle" placeholder="Name" onChange={(event)=> this.handleChange(event)}/></div>
                     <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={this.handleChange} value={this.state.lesson.username}/></div>
                     <div><input type="text" name="level" placeholder="Level" onChange={this.handleChange} value={this.state.lesson.password}/></div>
-                    <ButtonStyle>
                     <button>Submit</button>
-                    </ButtonStyle>
                 </form>
-            </div>
+            </ButtonStyle>
         )
     }
 }

@@ -42,14 +42,14 @@ class SingleLesson extends Component {
             })
     }
 
+    toggleEditLessonForm = () => {
+        this.setState({ editFormVisible: !this.state.editFormVisible })
+    }
+
     deleteLesson = () => {
         const lessonId = this.props.match.params.lessonId
         axios.delete(`/api/lessons/${lessonId}`)
             .then(() => this.props.history.goBack())
-    }
-
-    toggleEditLessonForm = () => {
-        this.setState({ editFormVisible: !this.state.editFormVisible })
     }
 
     createNewExercise = () => {
