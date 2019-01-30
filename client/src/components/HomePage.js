@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const OverallStyle = styled.div`
     text-align: center;
+    height: 100vh;
 `
 
 class HomePage extends Component {

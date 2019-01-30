@@ -29,16 +29,10 @@ class Exercise extends Component {
         }
     }
 
-    handleChange = (event, exerciseId) => {
-        console.log(exerciseId)
-        this.props.lesson.exercises.forEach((exercise) => {
-            if(exerciseId === exercise._id) {
-                this.setState({exercise: exercise})
-                updatedState[event.target.name] = event.target.value
-            }
-        })
-        const updatedState = { ...this.state.exercise }
-        this.setState({ exercise: updatedState })
+    handleChange = (event) => {
+        const exercise = { ...this.state.exercise }
+        exercise[event.target.name] = event.target.value
+        this.setState({ exercise })
     }
 
     handleSubmit = (event, exerciseId) => {
@@ -62,13 +56,13 @@ class Exercise extends Component {
                 {this.props.lesson.exercises.map((exercise, i) => (
                         <ExerciseStyle onBlur={(event) => this.handleSubmit(event, exercise._id)} key={i}>
                             <h6><b>Title</b></h6>
-                            <div><input type="text" name="exerciseTitle" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.exerciseTitle}></input></div>                         
+                            <div><input type="text" name="exerciseTitle" placeholder= {exercise.exerciseTitle} onChange={(event)=> this.handleChange(event, exercise._id)}></input></div>                         
                             <h6><b>Description</b></h6>  
-                            <div><input type="text" name="description" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.description}></input></div>
+                            <div><input type="text" name="description" placeholder= {exercise.description} onChange={(event)=> this.handleChange(event, exercise._id)}></input></div>
                             <h6><b>Equipment</b></h6>
-                            <div><input type="text" name="equipment" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.equipment}></input></div>
+                            <div><input type="text" name="equipment" placeholder= {exercise.equipment} onChange={(event)=> this.handleChange(event, exercise._id)}></input></div>
                             <h6><b>Spring Weight</b></h6>
-                            <div><input type="number" name="springWeight" onChange={(event)=> this.handleChange(event, exercise._id)} value={exercise.springWeight}></input></div>
+                            <div><input type="number" name="springWeight" placeholder= {exercise.springWeight} onChange={(event)=> this.handleChange(event, exercise._id)}></input></div>
                             <br></br>
                             <button onClick={(event)=> this.deleteExercise(event, exercise._id)}>Delete</button>
                         </ExerciseStyle>

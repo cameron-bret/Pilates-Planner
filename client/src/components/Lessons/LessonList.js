@@ -8,6 +8,7 @@ const OverallStyle = styled.div`
     text-align: center;
     text-decoration: none;
     color: #707070;
+    height: 100vh;
 `
 
 class LessonList extends Component {
