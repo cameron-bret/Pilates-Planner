@@ -86,6 +86,34 @@ const Lesson4 = new Lesson({
     exercises: [bicepCurl, pushUp]
 })
 
+const Lesson5 = new Lesson({
+    lessonTitle: 'Lesson 5',
+    muscleGroup: 'Arms',
+    level: 'Injury',
+    exercises: [bicepCurl, pushUp]
+})
+
+const Lesson6 = new Lesson({
+    lessonTitle: 'Lesson 6',
+    muscleGroup: 'Arms',
+    level: 'Injury',
+    exercises: [bicepCurl, pushUp]
+})
+
+const Lesson7 = new Lesson({
+    lessonTitle: 'Lesson 7',
+    muscleGroup: 'Arms',
+    level: 'Injury',
+    exercises: [bicepCurl, pushUp]
+})
+
+const Lesson8 = new Lesson({
+    lessonTitle: 'Lesson 8',
+    muscleGroup: 'Arms',
+    level: 'Injury',
+    exercises: [bicepCurl, pushUp]
+})
+
 Lesson.remove({})
     .then(() => Exercise.remove({}))
     .then(() => Exercise.insertMany([pushUp, bicepCurl, scissors, liftAndLower, plank, chestLifts, supineArms, skullCrusher]))
@@ -93,5 +121,8 @@ Lesson.remove({})
     .then(() => Lesson2.save())
     .then(() => Lesson3.save())
     .then(() => Lesson4.save())
-    .then(() => console.log('Successful Save'))
+    .then(() => Lesson5.save())
+    .then(() => Lesson6.save())
+    .then(() => Lesson7.save())
+    .then(() => Lesson8.save())
     .then(() => mongoose.connection.close())

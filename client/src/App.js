@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom'
 import HomePage from './components/HomePage'
 import LessonList from './components/Lessons/LessonList'
 import SingleLesson from './components/Lessons/SingleLesson'
-import styled from 'styled-components'
-
 
 class App extends Component {
   render() {
@@ -20,4 +18,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
