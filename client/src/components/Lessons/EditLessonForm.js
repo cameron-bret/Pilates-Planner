@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
-const FormStyle = styled.button`
+const ButtonStyle = styled.button`
     text-align: center;
     border: none;
     background-color: #CF986F;
@@ -41,14 +41,14 @@ class EditLessonForm extends Component {
 
     render() {
         return (
-            <FormStyle>
+            <ButtonStyle>
                 <form onSubmit={this.handleSubmit}>
                     <div><input type="text" name="lessonTitle" placeholder="Name" onChange={(event)=> this.handleChange(event)}/></div>
-                    <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={this.handleChange} value={this.state.lesson.username}/></div>
-                    <div><input type="text" name="level" placeholder="Level" onChange={this.handleChange} value={this.state.lesson.password}/></div>
+                    <div><input type="text" name="muscleGroup" placeholder="Muscle Group" onChange={this.handleChange} value={this.state.lesson.muscleGroup}/></div>
+                    <div><input type="text" name="level" placeholder="Level" onChange={this.handleChange} value={this.state.lesson.level}/></div>
                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right"></i></button>
                 </form>
-            </FormStyle>
+            </ButtonStyle>
         )
     }
 }

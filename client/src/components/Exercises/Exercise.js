@@ -64,7 +64,7 @@ class Exercise extends Component {
                             <h6><b>Spring Weight</b></h6>
                             <div><input type="number" name="springWeight" placeholder= {exercise.springWeight} onChange={(event)=> this.handleChange(event, exercise._id)}></input></div>
                             <br></br>
-                            <button onClick={(event)=> this.deleteExercise(event, exercise._id)}>Delete</button>
+                            <button class="btn waves-effect waves-light" type="submit" name="action" onClick={(event)=> this.deleteExercise(event, exercise._id)}>Delete<i class="material-icons right"></i></button>
                         </ExerciseStyle>
                     ))}        
             </ExercisesContainer>

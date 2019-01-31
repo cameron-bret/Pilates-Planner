@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const OverallStyle = styled.div`
+const HomeStyle = styled.div`
     text-align: center;
     height: 100vh;
 `
@@ -10,7 +10,7 @@ const OverallStyle = styled.div`
 class HomePage extends Component {
     render() {
         return (
-            <OverallStyle>
+            <HomeStyle>
             <div>
             <br></br>
             <Link to="/">
@@ -24,7 +24,7 @@ class HomePage extends Component {
                 <Link to="/lessons">
                 <a href="https://imgur.com/pICwU5q"><img src="https://i.imgur.com/pICwU5q.png" alt="muscle group selector" /></a>
                 </Link>
-            </OverallStyle>
+            </HomeStyle>
         )
     }
 }

@@ -5,11 +5,12 @@ import Exercise from '../Exercises/Exercise'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const OverallStyle = styled.div`
+const SingleLessonStyle = styled.div`
     text-align: center;
     font-family: Lato;
     font-size: 16px;
     color: #707070;
+    text-decoration: none;
 `
 
 class SingleLesson extends Component {
@@ -62,7 +63,7 @@ class SingleLesson extends Component {
 
     render() {
         return (
-            <OverallStyle>
+            <SingleLessonStyle>
                 <div>
                 <br></br>
                 <Link to="/">
@@ -72,12 +73,16 @@ class SingleLesson extends Component {
                 <h2>{this.state.lesson.lessonTitle}</h2>
                 <h6><b>Muscle Group: </b>{this.state.lesson.muscleGroup}</h6>
                 <h6><b>Level: </b>{this.state.lesson.level}</h6>
-                <div><button onClick={this.toggleEditLessonForm}>Edit Lesson</button></div>
+                <br></br>
+                <div><button class="btn waves-effect waves-light" onClick={this.toggleEditLessonForm}>Edit Lesson<i class="material-icons right"></i></button></div>
+                <hr></hr>
                 {this.state.editFormVisible ? <EditLessonForm getSingleLesson={this.getSingleLesson} lessonId={this.state.lesson._id} toggleEditLessonForm={this.toggleEditLessonForm}/> : null}
-                <div><button onClick={this.deleteLesson}>Delete Lesson</button></div>
-                <div><button onClick={this.createNewExercise}>Add Exercise</button></div>
+                <hr></hr>
+                <div><button class="btn waves-effect waves-light" type="submit" name="action" onClick={this.deleteLesson}>Delete Lesson<i class="material-icons right"></i></button></div>
+                <br></br>
+                <div><button class="btn waves-effect waves-light" type="submit" name="action" onClick={this.createNewExercise}>Add Exercise<i class="material-icons right"></i></button></div>
                 <Exercise lesson={this.state.lesson} getSingleLesson={this.getSingleLesson}/>
-            </OverallStyle>
+            </SingleLessonStyle>
         )
     }
 }

@@ -4,7 +4,7 @@ import CreateLesson from './CreateLesson'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const OverallStyle = styled.div`
+const LessonListStyle = styled.div`
     text-align: center;
     text-decoration: none;
     color: #707070;
@@ -32,7 +32,7 @@ class LessonList extends Component {
 
     render() {
         return (
-            <OverallStyle>
+            <LessonListStyle>
                 <div>
                 <br></br>
                 <Link to="/">
@@ -40,14 +40,16 @@ class LessonList extends Component {
                 </Link>
                 </div>
                 <h2>Lessons</h2>
-                <button onClick={this.toggleCreateLesson}>Create New Lesson</button>
+                <button class="btn waves-effect waves-light" onClick={this.toggleCreateLesson}>Create New Lesson<i class="material-icons right"></i></button>
+                <hr></hr>
                 {this.state.createLessonVisible ? <CreateLesson getAllLessons={this.getAllLessons} toggleCreateLesson={this.toggleCreateLesson}/> : null}
+                <hr></hr>
                 {this.state.lessons.map((lesson, i) => (
                     <div key={i}>
                         <Link to={`/lessons/${lesson._id}`}><h5>{lesson.lessonTitle}</h5></Link>
                     </div>
                 ))}
-            </OverallStyle>
+            </LessonListStyle>
         )
     }
 }
