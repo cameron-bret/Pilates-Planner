@@ -4,6 +4,7 @@ import EditLessonForm from './EditLessonForm'
 import Exercise from '../Exercises/Exercise'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+// import SingleLessonCalendar from '../Calendars/SingleLessonCalendar'
 
 const SingleLessonStyle = styled.div`
     text-align: center;
@@ -82,6 +83,7 @@ class SingleLesson extends Component {
                 <br></br>
                 <div><button class="btn waves-effect waves-light" type="submit" name="action" onClick={this.createNewExercise}>Add Exercise<i class="material-icons right"></i></button></div>
                 <Exercise lesson={this.state.lesson} getSingleLesson={this.getSingleLesson}/>
+                {/* <SingleLessonCalendar/> */}
             </SingleLessonStyle>
         )
     }
