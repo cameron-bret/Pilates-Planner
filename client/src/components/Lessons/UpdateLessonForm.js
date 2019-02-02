@@ -13,7 +13,7 @@ const ButtonStyle = styled.button`
     font-size: 16px;
 `
 
-class EditLessonForm extends Component {
+class UpdateLessonForm extends Component {
     state = {
         lesson: {
             lessonTitle: '',
@@ -53,4 +53,4 @@ class EditLessonForm extends Component {
     }
 }
 
-export default EditLessonForm
+export default UpdateLessonForm

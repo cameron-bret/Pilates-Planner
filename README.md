@@ -1,6 +1,6 @@
 **PROJECT DESCRIPTION**
 
-Pilates Planner is a full stack web application for creating and organizing lesson plans for pilates classes.
+Pilates Planner is a full stack web application for creating and organizing lesson plans for pilates classes!
 
 **Below is a link to the app itself**
 
@@ -19,7 +19,7 @@ https://trello.com/b/rJWyZYuF/pilates-planner
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
-Adobe XD, Adobe Photoshop, Adobe Capture, MondoDB, Mongoose, Express.js, React.js, Node.js, styled-components, Materialize, axios, react-router-dom, npm, nodemon, Heroku, Github, and classroom lessons. 
+Adobe XD, Adobe Photoshop, Adobe Capture, MondoDB, Mongoose, Express.js, React.js, Node.js, styled-components, Materialize, axios, react-router-dom, npm, nodemon, Heroku, Github, and classroom lessons.
 
 **Below is a list of goals for version 2**
 
@@ -36,6 +36,7 @@ Adobe XD, Adobe Photoshop, Adobe Capture, MondoDB, Mongoose, Express.js, React.j
 - Andrew McIntosh
 - Mark Haley
 - C'zar Dubois
+- James Royals
 - Spencer Merryman
 - Cameron Gunter
 - Stanley Kimani

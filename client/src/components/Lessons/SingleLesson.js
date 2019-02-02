@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import EditLessonForm from './EditLessonForm'
+import UpdateLessonForm from './UpdateLessonForm'
 import Exercise from '../Exercises/Exercise'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-// import SingleLessonCalendar from '../Calendars/SingleLessonCalendar'
 
 const SingleLessonStyle = styled.div`
     text-align: center;
@@ -77,13 +76,12 @@ class SingleLesson extends Component {
                 <br></br>
                 <div><button class="btn waves-effect waves-light" onClick={this.toggleEditLessonForm}>Edit Lesson<i class="material-icons right"></i></button></div>
                 <hr></hr>
-                {this.state.editFormVisible ? <EditLessonForm getSingleLesson={this.getSingleLesson} lessonId={this.state.lesson._id} toggleEditLessonForm={this.toggleEditLessonForm}/> : null}
+                {this.state.editFormVisible ? <UpdateLessonForm getSingleLesson={this.getSingleLesson} lessonId={this.state.lesson._id} toggleEditLessonForm={this.toggleEditLessonForm}/> : null}
                 <hr></hr>
                 <div><button class="btn waves-effect waves-light" type="submit" name="action" onClick={this.deleteLesson}>Delete Lesson<i class="material-icons right"></i></button></div>
                 <br></br>
                 <div><button class="btn waves-effect waves-light" type="submit" name="action" onClick={this.createNewExercise}>Add Exercise<i class="material-icons right"></i></button></div>
                 <Exercise lesson={this.state.lesson} getSingleLesson={this.getSingleLesson}/>
-                {/* <SingleLessonCalendar/> */}
             </SingleLessonStyle>
         )
     }
