@@ -14,3 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+::placeholder {
+  color: black;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  opacity: 1; 
+}
