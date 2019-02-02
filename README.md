@@ -35,6 +35,7 @@ Adobe XD, Adobe Photoshop, Adobe Capture, MondoDB, Mongoose, Express.js, React.j
 - Daniel Mishael
 - Andrew McIntosh
 - Mark Haley
+- C'zar Dubois
 - Spencer Merryman
 - Cameron Gunter
 - Stanley Kimani
