@@ -24,7 +24,7 @@ Adobe XD, Adobe Photoshop, Adobe Capture, MondoDB, Mongoose, Express.js, React.j
 **Below is a list of goals for version 2**
 
 - version 2 goal: The teachers will have their own portal with AuthO sign in.
-- version 2 goal: The lessons will be able to be added to a calendar with time slots.
+- version 2 goal: The lessons will be able to be added to a Google Calendar using their API.
 - version 2 goal: There will be a sharing feature and a student log in portal.
 
 **Special Thanks**
