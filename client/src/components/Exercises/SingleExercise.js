@@ -29,7 +29,6 @@
 //         const exerciseId = this.props.match.params.exerciseId
 //         axios.get(`/api/exercises/${exerciseId}`)
 //             .then((res) => {
-//                 console.log(res.data)
 //                 this.setState({ exercise: res.data })
 //             })
 //     }

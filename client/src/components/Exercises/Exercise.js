@@ -44,7 +44,6 @@ class Exercise extends Component {
 
     deleteExercise = (event, exerciseId) => {
         event.preventDefault()
-        console.log(exerciseId)
         axios.delete(`/api/exercises/${exerciseId}`).then(() => {
             this.props.getSingleLesson()
         })

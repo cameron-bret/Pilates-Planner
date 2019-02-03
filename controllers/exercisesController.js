@@ -22,10 +22,8 @@ const exercisesController = {
         var lessonId = req.params.lessonId
         Lesson.findById(lessonId)
             .then((lesson) => {
-                console.log(lesson)
                 Exercise.create(req.body)
                     .then((newExercise) => {
-                        console.log(newExercise)
                         lesson.exercises.push(newExercise)
                         lesson.save()
                         res.send(newExercise)

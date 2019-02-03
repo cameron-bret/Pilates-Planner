@@ -38,7 +38,6 @@ class SingleLesson extends Component {
         const lessonId = this.props.match.params.lessonId
         axios.get(`/api/lessons/${lessonId}`)
             .then((res) => {
-                console.log(res.data)
                 this.setState({ lesson: res.data })
             })
     }
@@ -56,7 +55,6 @@ class SingleLesson extends Component {
     createNewExercise = () => {
         const lessonId = this.props.match.params.lessonId
         axios.post(`/api/lessons/${lessonId}/exercises`, this.state.exercise).then((res) => {
-            console.log(res.data)
             this.getSingleLesson()
         })
     }
