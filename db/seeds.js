@@ -52,7 +52,7 @@ const supineArms = new Exercise({
 })
 
 const skullCrusher = new Exercise({
-    exerciseTitle: 'Skull Crasher',
+    exerciseTitle: 'Skull Crusher',
     description: "Tricep over the head lifty thingy",
     equipment: "Mat or Reformer",
     springWeight: 1
