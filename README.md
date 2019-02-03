@@ -1,4 +1,4 @@
-#PROJECT DESCRIPTION#
+**PROJECT DESCRIPTION**
 
 Pilates Planner is a full stack web application for creating and organizing lesson plans for pilates classes! With this app a pilates instructor can easily create new Lessons based on difficulty level and muscle groups and add Exercises to those lesson plans. Version 2 will integrate with the Google Calendar API so that Lessons can be assigned a specific date and time!
 
