@@ -24,6 +24,16 @@ class HomePage extends Component {
                 <Link to="/lessons">
                 <a href="https://imgur.com/pICwU5q"><img src="https://i.imgur.com/pICwU5q.png" alt="muscle group selector" /></a>
                 </Link>
+                <br></br>
+                <br></br>
+                <hr></hr>
+                <hr></hr>
+                <Link to="/exercises">
+                <button class="btn waves-effect waves-light">Exercises<i class="material-icons right"></i></button>
+                </Link>
+                <Link to="/lessons">
+                <button class="btn waves-effect waves-light">Lessons<i class="material-icons right"></i></button>
+                </Link>
             </HomeStyle>
         )
     }
