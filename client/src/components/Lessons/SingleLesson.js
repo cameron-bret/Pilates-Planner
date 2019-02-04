@@ -80,6 +80,7 @@ class SingleLesson extends Component {
                 <br></br>
                 <Exercise lesson={this.state.lesson} getSingleLesson={this.getSingleLesson}/>
                 <div><button class="btn waves-effect waves-light" type="submit" name="action" onClick={this.createNewExercise}>Add Exercise<i class="material-icons right"></i></button></div>
+                <br></br>
             </SingleLessonStyle>
         )
     }
